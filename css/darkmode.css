@@ -1,0 +1,100 @@
+/* Dark Mode Toggle Styles */
+.darkmode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.darkmode-toggle input {
+    display: none;
+}
+
+.darkmode-toggle label {
+    background-color: #111;
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.darkmode-toggle label:after {
+    content: "";
+    background-color: #fff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.darkmode-toggle input:checked + label {
+    background-color: #444;
+}
+
+.darkmode-toggle input:checked + label:after {
+    left: 32px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Ensuring White Blocks Have Dark Backgrounds in Dark Mode */
+body.dark-mode .white-block, 
+body.dark-mode .white-background {
+    background-color: #333 !important;
+    color: #ffffff !important;
+}
+
+/* Additional styles for other elements that might be problematic */
+body.dark-mode .white-background * {
+    color: #ffffff !important;
+}
+
+/* General Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Specific fixes for elements with white backgrounds */
+body.dark-mode .white-block, 
+body.dark-mode .white-background {
+    background-color: #333 !important;
+    color: #ffffff !important;
+}
+
+/* Targeting common problematic elements */
+body.dark-mode p, 
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6,
+body.dark-mode span,
+body.dark-mode a {
+    color: #ffffff !important;
+}
+
+body.dark-mode .white-block * {
+    color: #ffffff !important;
+}
+
+/* Additional Targeting for Backgrounds */
+body.dark-mode .white-block,
+body.dark-mode .white-block * {
+    background-color: #333 !important;
+}
+
+body.dark-mode .invert-darkmode, /* Generic class for custom elements */
+body.dark-mode .invert-darkmode * {
+    background-color: #333 !important;
+    color: #ffffff !important;
+}
